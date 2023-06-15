@@ -7,6 +7,7 @@ var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 const exphbs = require("express-handlebars");
 var db = require('./config/connection')
+var session = require('express-session')
 
 var app = express();
 const fileUpload = require('express-fileupload');
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload())
+app.use(session({secret:'Key',cookie:{maxAge:300000}}))
 db.connect((err)=>{
   if(err) {
     console.log('connection Error' + err)

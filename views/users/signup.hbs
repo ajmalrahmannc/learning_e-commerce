@@ -1,0 +1,52 @@
+  <style>
+    .container {
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 100px;
+    }
+
+    .container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Create New Account</h2>
+    <form action="/signup" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="Username" class="form-control" placeholder="Enter your username" required>
+
+      <label for="password">Email</label>
+      <input type="email" id="email" name="Email" class="form-control" placeholder="Enter your Email Address" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="Password" class="form-control" placeholder="Enter your password" required>
+
+        <a href="/login">already have an account ?</a>
+      <button class="mt-4 btn btn-primary float-right" type="submit" >Signup</button>
+    </form>
+  </div>
+</body>

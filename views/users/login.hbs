@@ -1,0 +1,51 @@
+  <style>
+    .container {
+      width: 600px;
+      height: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 100px;
+    }
+
+    .container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Login Form</h2>
+    <form method="post" action="/login">
+    {{#if loginErr}}
+    <p class="error" style="color: red;text-align: center;">{{loginErr}}</p>
+    {{/if}}
+      <label for="username">Email Address</label>
+      <input type="text" id="email" name="Email" class="form-control" placeholder="Enter your Email Address" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="Password" class="form-control" placeholder="Enter your password" required>
+
+        <a href="/signup">Create new account</a>
+      <button class="mt-4 btn btn-primary float-right" type="submit" >Login</button>
+    </form>
+  </div>
+</body>

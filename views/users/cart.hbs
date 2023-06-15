@@ -1,0 +1,28 @@
+<section>
+    <div class="container">
+
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {{#each products}}
+                <tr>
+                    <td><img style="width: 70px;height: 70px;" src="/product-images/{{this._id}}.jpg" alt=""></td>
+                    <td>{{this.name}}</td>
+                    <td><button class="btn btn-secondary mr-3">-</button>1 <button class="btn btn-secondary ml-3">+</button></td>
+                    <td>
+                        <a href="" class="btn btn-danger">Remove</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
